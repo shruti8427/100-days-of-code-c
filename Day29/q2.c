@@ -1,0 +1,52 @@
+/*
+ * Name : Shruti Mittal
+ * SAP ID : 590036394
+ * Day : 29                              Question : 2
+ * Date : 07-09-2026
+ * PROBLEM STATEMENT : Find the maximum and minimum element in an array.
+ * 
+ * Sample Test Cases:
+ * Input 1:
+ * 5
+ * 2 9 1 4 7
+ * Output 1:
+ * Max=9, Min=1
+ * 
+ * Input 2:
+ * 3
+ * 10 10 10
+ * Output 2:
+ * Max=10, Min=10
+ */
+
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        return 1;
+    }
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int max = arr[0];
+    int min = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    printf("Max=%d, Min=%d\n", max, min);
+
+    return 0;
+}
